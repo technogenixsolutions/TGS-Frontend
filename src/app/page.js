@@ -43,7 +43,7 @@ export default function Home() {
         <meta name="twitter:creator" content="@yourtwitter" />
       </Head>
 
-      <div className="text-white">Hello world</div>
+ 
     </>
   );
 }
