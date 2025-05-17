@@ -62,7 +62,9 @@ function OurTechnologi() {
 
 
     return (
-        <div className="my-20 bg-[#F3FEF6] py-20">
+        <section className="bg-[#F3FEF6]">
+
+        <div className="my-20  py-20 max-w-screen-2xl mx-auto">
             <div className="text-left md:text-center space-y-2 md:space-y-0">
                 <h3 className="text-primary text-base font-semibold tracking-[0.621px] leading-4 uppercase mb-1">
                     Innovation
@@ -107,6 +109,7 @@ function OurTechnologi() {
             </div>
 
         </div>
+        </section>
     );
 }
 

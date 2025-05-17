@@ -62,7 +62,7 @@ function OurClients() {
 
 
     return (
-        <div className="my-20">
+        <section className="my-20 max-w-screen-2xl mx-auto">
             <div className="text-left md:text-center space-y-2 md:space-y-0">
                 <h3 className="text-primary text-base font-semibold tracking-[0.621px] leading-4 uppercase mb-1">
                     partner's
@@ -106,7 +106,7 @@ function OurClients() {
 
             </div>
 
-        </div>
+        </section>
     );
 }
 
