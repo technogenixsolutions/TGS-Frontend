@@ -1,5 +1,6 @@
 import Hero from "@/_component/page/home/Hero";
 import OurClients from "@/_component/page/home/OurClients";
+import OurTechnologi from "@/_component/page/home/OurTechnologi";
 import Head from "next/head";
 
 export default function Home() {
@@ -46,6 +47,7 @@ export default function Home() {
       </Head>
       <Hero></Hero>
       <OurClients></OurClients>
+      <OurTechnologi></OurTechnologi>
 
     </>
   );

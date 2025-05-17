@@ -62,7 +62,7 @@ function OurClients() {
 
 
     return (
-        <div className="my-10">
+        <div className="my-20">
             <div className="text-left md:text-center space-y-2 md:space-y-0">
                 <h3 className="text-primary text-base font-semibold tracking-[0.621px] leading-4 uppercase mb-1">
                     partner's
