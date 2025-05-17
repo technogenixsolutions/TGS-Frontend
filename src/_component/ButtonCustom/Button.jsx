@@ -10,7 +10,7 @@ const CustomButton = ({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`bg-primary px-5 text-white py-2 rounded-full cursor-pointer
+      className={`bg-primary px-8 text-white py-2 rounded-full cursor-pointer
       `}
     >
       {children}

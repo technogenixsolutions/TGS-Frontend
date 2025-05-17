@@ -72,13 +72,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.className} antialiased`}
       >
         <PageContextProvider>
           <Header />
-          {children}
+          <div className="min-h-[calc(100vh-550px)]">
+             {children}
+          </div>
           <Footer />
         </PageContextProvider>
       </body>

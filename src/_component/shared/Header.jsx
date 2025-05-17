@@ -172,13 +172,13 @@ const Navbar = () => {
   z-10 transition-all ease-in opacity-0 group-hover:translate-y-0 
   group-hover:opacity-100 group-hover:block"
                     >
-                      <div className="grid max-w-screen-xl px-4 py-4 mx-auto text-gray-900  grid-cols-4 md:px-6">
+                      <div className="grid hidden max-w-screen-xl px-4 py-4 mx-auto text-gray-900  grid-cols-4 md:px-6">
                         {services.map(({ category, items }) => (
                           <div key={category} className="">
                             <h2 className="text-xl font-bold mb-3 underline">{category}</h2>
                             <ul className="">
                               {items.map(({ name, description, img }) => (
-                                <div className="flex  hover:bg-gray-100 p-2 rounded-lg">
+                                <div key={name} className="flex  hover:bg-gray-100 p-2 rounded-lg">
                                   <div className="relative w-12 h-12 mt-1.5">
                                     <Image
                                       src={img}
@@ -292,7 +292,7 @@ const Navbar = () => {
                               <h2 className="text-xl font-bold mb-3 underline">{category}</h2>
                               <ul className="">
                                 {items.map(({ name, description, img }) => (
-                                  <div className="flex  hover:bg-gray-100 p-2 rounded-lg">
+                                  <div key={name} className="flex  hover:bg-gray-100 p-2 rounded-lg">
                                     <div className="relative w-12 h-12 mt-1.5">
                                       <Image
                                         src={img}
