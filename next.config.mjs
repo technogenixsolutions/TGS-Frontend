@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-    domains: ['i.postimg.cc'], // ✅ allow external image domain
+    domains: ['i.postimg.cc',"acotegroup.com"], // ✅ allow external image domain
   },
 
 };

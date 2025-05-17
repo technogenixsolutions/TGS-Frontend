@@ -1,4 +1,5 @@
 import Hero from "@/_component/page/home/Hero";
+import OurClients from "@/_component/page/home/OurClients";
 import Head from "next/head";
 
 export default function Home() {
@@ -44,6 +45,7 @@ export default function Home() {
         <meta name="twitter:creator" content="@yourtwitter" />
       </Head>
       <Hero></Hero>
+      <OurClients></OurClients>
 
     </>
   );
