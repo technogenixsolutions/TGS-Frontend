@@ -2,6 +2,7 @@ import FeaturedPartners from "@/_component/page/home/FeaturedPartners";
 import Hero from "@/_component/page/home/Hero";
 import OurClients from "@/_component/page/home/OurClients";
 import OurTechnologi from "@/_component/page/home/OurTechnologi";
+import Testimony from "@/_component/page/home/Testimony";
 import Head from "next/head";
 
 export default function Home() {
@@ -50,6 +51,7 @@ export default function Home() {
       <OurClients></OurClients>
       <OurTechnologi></OurTechnologi>
       <FeaturedPartners></FeaturedPartners>
+      <Testimony></Testimony>
     </>
   );
 }
