@@ -1,11 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --color-primary: #081B55;
-   --color-secondary: #05DCFC;
+  --color-primary: #20B149;
+  --color-footer: #081B55;
+  --color-secondary: #05DCFC;
 }
 
 @theme inline {
+
+  --color-footer: var(--color-footer);
   --color-primary: var(--color-primary);
   --color-secondary: var(--color-secondary);
   --color-accent: var(--color-accent);

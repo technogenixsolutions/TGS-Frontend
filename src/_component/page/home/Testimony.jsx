@@ -36,7 +36,7 @@ function Testimony() {
         },
     ];
     return (
-        <section className="my-10">
+        <section className="my-10 max-w-screen-2xl mx-auto">
             <div className="text-left md:text-center mb-12">
                 <h3 className="text-primary text-base font-semibold uppercase mb-2">Testimony</h3>
                 <h2 className="text-black font-semibold text-3xl md:text-[40px] leading-[58px]">

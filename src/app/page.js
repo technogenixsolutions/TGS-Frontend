@@ -3,6 +3,7 @@ import Hero from "@/_component/page/home/Hero";
 import OurClients from "@/_component/page/home/OurClients";
 import OurEvents from "@/_component/page/home/OurEvents";
 import Ourjourney from "@/_component/page/home/Ourjourney";
+import OurServices from "@/_component/page/home/OurServices";
 import OurTechnologi from "@/_component/page/home/OurTechnologi";
 import Testimony from "@/_component/page/home/Testimony";
 import Head from "next/head";
@@ -50,6 +51,7 @@ export default function Home() {
         <meta name="twitter:creator" content="@yourtwitter" />
       </Head>
       <Hero></Hero>
+      <OurServices></OurServices>
       <Ourjourney></Ourjourney>
       <OurClients></OurClients>
       <OurTechnologi></OurTechnologi>

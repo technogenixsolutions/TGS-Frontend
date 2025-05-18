@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 
 export default function Footer() {
-  return <footer className="bg-primary">
+  return <footer className="bg-footer">
     <div className="max-w-screen-2xl mx-auto ">
       <div >
         <div className=" py-11 w-full  px-4 md:px-3">
