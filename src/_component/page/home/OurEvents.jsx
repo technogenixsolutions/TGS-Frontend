@@ -45,7 +45,7 @@ function OurEvents() {
             description: "We were honored to welcome Mammad Nasliov, CEO of Vertus Engineering Co., to Acote Group!"
         }
     ];
-
+    
     return (
         <section className="mb-10">
             <div className="flex justify-between px-3 items-center ">

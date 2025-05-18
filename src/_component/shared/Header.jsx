@@ -139,7 +139,7 @@ const Navbar = () => {
           </div>
           {/* dekstop Navigation Menu */}
           <div id="mega-menu-full" className="items-center justify-between font-normal gap-x-6  w-full hidden md:flex md:w-auto ">
-            <ul className="flex gap-8 items-center">
+            <ul className="flex  lg:gap-x-8 items-center">
               {navLinks.map((val) => (
                 val.title === "Services" ? (
                   <li key={val.title} className=" group cursor-pointer">

@@ -35,7 +35,6 @@ function Testimony() {
                 "This is a placeholder for the third testimonial. Replace it with actual content when available.",
         },
     ];
-
     return (
         <section className="my-10">
             <div className="text-left md:text-center mb-12">
