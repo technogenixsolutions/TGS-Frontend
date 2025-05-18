@@ -20,7 +20,7 @@ function Testimony() {
         },
         {
             src: "https://i.postimg.cc/sXpHNNW7/testimony-2.webp",
-            rating: 5,
+            rating: 4,
             name: "Joonyum Choi",
             company: "CEO, Tintolab",
             description:
@@ -37,7 +37,7 @@ function Testimony() {
     ];
 
     return (
-        <section className="my-20">
+        <section className="my-10">
             <div className="text-left md:text-center mb-12">
                 <h3 className="text-primary text-base font-semibold uppercase mb-2">Testimony</h3>
                 <h2 className="text-black font-semibold text-3xl md:text-[40px] leading-[58px]">
