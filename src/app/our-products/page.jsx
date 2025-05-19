@@ -66,8 +66,8 @@ function page() {
         },
         {
             id: 8,
-            title: "Toll Management System",
-            imageUrl: "https://acotegroup.com/products/8/product-01.png",
+            title: "Pricing Plans",
+            imageUrl: "https://i.postimg.cc/vTFHPGBv/Monthly-Vs-Yearly.webp",
             link: "/our-products/product-8",
             category: "POS",
         },
@@ -80,7 +80,7 @@ function page() {
         },
     ];
     const [activeCategory, setActiveCategory] = useState("All");
-    const filteredProducts = activeCategory === "All" ? products : products?.filter(product => pridu)
+    const filteredProducts = activeCategory === "All" ? products : products?.filter(product => product?.category === activeCategory)
     return (
         <section className="max-w-screen-2xl mx-auto px-2 py-10">
             <div className="flex flex-col items-center justify-center w-full space-y-3 md:space-y-5">
@@ -113,8 +113,8 @@ function page() {
             </div>
 
             {/* product design */}
-            <div className="grid gap-4 grid-cols-3 rounded-2xl overflow-hidden shadow-lg">
-                {products?.map((val, index) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 rounded-2xl overflow-hidden shadow-lg">
+                {filteredProducts?.map((val, index) => (
                     <Link key={index} href={val?.link} className="p-2">
                         <div className="relative w-full h-80 rounded-t-2xl">
                             <Image
