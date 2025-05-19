@@ -71,21 +71,22 @@ export default function Footer() {
                       <path fillRule="evenodd" clipRule="evenodd" d="M0.174438 7.59894C0.174438 3.5208 3.58233 0.224609 7.70453 0.224609C11.8383 0.224609 15.2462 3.5208 15.2462 7.59894C15.2462 9.65396 14.4989 11.5618 13.2687 13.1789C11.9117 14.9626 10.239 16.5168 8.35625 17.7366C7.92534 18.0186 7.53646 18.0398 7.06354 17.7366C5.17006 16.5168 3.4974 14.9626 2.15195 13.1789C0.920921 11.5618 0.174438 9.65396 0.174438 7.59894ZM5.22281 7.82832C5.22281 9.19449 6.33761 10.269 7.70453 10.269C9.07233 10.269 10.1979 9.19449 10.1979 7.82832C10.1979 6.47278 9.07233 5.34598 7.70453 5.34598C6.33761 5.34598 5.22281 6.47278 5.22281 7.82832Z" fill="#21B24B" />
                     </svg>
                     <p>
-                      Main HQ :<br />
-                      DTX Business Center, 6th Floor, Plot no .1176 &amp; 1543 Pragati Sarani Road, Kuril, Dhaka 1229
+                      Sector #11, Road #9, House #15, Uttara-Dhaka
+                      {/* Main HQ :<br />
+                      DTX Business Center, 6th Floor, Plot no .1176 &amp; 1543 Pragati Sarani Road, Kuril, Dhaka 1229 */}
                     </p>
                   </li>
 
                   {/* Phone */}
                   <li className="flex gap-4 items-center">
                     {/* Add your phone SVG here */}
-                    <p><a href="tel:+8801758388865">+880 1758 388865</a></p>
+                    <p><a href="tel:+88 01739715893">+88 01739715893</a></p>
                   </li>
 
                   {/* Email */}
                   <li className="flex gap-4 items-center">
                     {/* Add your email SVG here */}
-                    <p><a href="mailto:info@acotegroup.com">info@acotegroup.com</a></p>
+                    <p><a href="mailto:info@acotegroup.com">technogenixsolutions@gmail.com</a></p>
                   </li>
                 </ul>
               </div>
@@ -96,9 +97,9 @@ export default function Footer() {
       </div>
       {/* Footer Bottom Bar */}
       <hr className="text-gray-300 opacity-35" />
-      <div className="flex justify-between text-white py-5">
+      <div className="text-center md:flex justify-between text-white py-5">
         <p>© Copyright 2025 Acote Group | All Rights Reserved.</p>
-        <div className="flex gap-x-4 ">
+        <div className="md:flex gap-x-4 mt-3 md:mt-0">
           <p>Privacy policy</p>
           <p>Terms and conditions</p>
         </div>

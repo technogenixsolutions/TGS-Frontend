@@ -8,6 +8,7 @@ import Navbartop from "./Navbartop";
 import { useState } from "react";
 
 const Navbar = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [toggle, setToggle] = useState(false)
   const navLinks = [
     { title: "Home", path: "/" },
@@ -124,13 +125,16 @@ const Navbar = () => {
   ];
 
   const pathname = usePathname();
+
+  console.log("dropdown", isDropdownOpen)
   return (
     <>
       <Navbartop></Navbartop>
       <nav className="bg-white relative  ">
-        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+        <div onMouseLeave={() => setIsDropdownOpen(false)} className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
           <div className="relative w-40 h-10">
             <Image
+              onMouseEnter={() => setIsDropdownOpen(false)}
               src="https://i.postimg.cc/qgr6YXX6/Techno-Genix.webp"
               alt="Techno Genix Logo"
               fill  // এটি height ও width কে parent div থেকে নেয়
@@ -138,14 +142,18 @@ const Navbar = () => {
             />
           </div>
           {/* dekstop Navigation Menu */}
-          <div id="mega-menu-full" className="items-center justify-between font-normal gap-x-6  w-full hidden md:flex md:w-auto ">
-            <ul className="flex  lg:gap-x-8 items-center">
+          <div id="mega-menu-full" className=" items-center justify-between font-normal gap-x-6 w-full hidden lg:flex md:w-auto ">
+            <ul className="flex lg:gap-x-8 items-center " >
               {navLinks.map((val) => (
                 val.title === "Services" ? (
-                  <li key={val.title} className=" group cursor-pointer">
+                  <li
+                    key={val.title}
+                    className=" cursor-pointer"
+                    onMouseEnter={() => setIsDropdownOpen(true)}
+                  >
                     <Link
                       href={val.path}
-                      className={`inline-flex items-center gap-2  transition-all duration-300 ${pathname === val.path ? 'font-bold text-primary' : 'text-black'
+                      className={`inline-flex items-center gap-2 transition-all duration-300 ${pathname === val.path ? 'font-bold text-primary' : 'text-black'
                         }`}
                     >
                       {val.title}
@@ -159,56 +167,52 @@ const Navbar = () => {
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        className="lucide lucide-chevron-down transition-transform duration-300 group-hover:rotate-180"
+                        className={`lucide lucide-chevron-down transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''
+                          }`}
                       >
-                        <path d="m6 9 6 6 6-6"></path>
+                        <path d="m6 9 6 6 6-6" />
                       </svg>
                     </Link>
 
-                    {/* Dropdown menu for Services */}
-                    <section
-                      className="absolute left-1/2 w-full top-full transform -translate-x-1/2 translate-y-10 
-  delay-100 rounded-lg max-w-screen-xl bg-white p-4 shadow-2xl shadow-black 
-  z-10 transition-all ease-in opacity-0 group-hover:translate-y-0 
-  group-hover:opacity-100 group-hover:block"
-                    >
-                      <div className="grid hidden max-w-screen-xl px-4 py-4 mx-auto text-gray-900  grid-cols-4 md:px-6">
-                        {services.map(({ category, items }) => (
-                          <div key={category} className="">
-                            <h2 className="text-xl font-bold mb-3 underline">{category}</h2>
-                            <ul className="">
-                              {items.map(({ name, description, img }) => (
-                                <div key={name} className="flex  hover:bg-gray-100 p-2 rounded-lg">
-                                  <div className="relative w-12 h-12 mt-1.5">
-                                    <Image
-                                      src={img}
-                                      alt="Each link Logo"
-                                      fill  // এটি height ও width কে parent div থেকে নেয়
-                                      className="object-contain"
-                                    />
-                                  </div>
-                                  <li key={name}>
-                                    <a
-                                      href="#"
-                                      className="block p-3  "
-                                    >
-                                      <div className="font-semibold">{name}</div>
-                                      <span className="text-sm text-gray-500 dark:text-gray-400">
-                                        {description.slice(0, 50)}...
-                                      </span>
-                                    </a>
-                                  </li>
-                                </div>
-                              ))}
-
-                              <li className="font-medium hover:underline">All Services</li>
-
-                            </ul>
+                    {/* Dropdown menu */}
+                    {isDropdownOpen && (
+                      <section className="absolute border  w-full bg-white left-0 top-full rounded-lg  p-4 shadow-2xl z-50">
+                        <div
+                          className="max-w-screen-2xl mx-auto   "
+                        >
+                          <div className="grid grid-cols-4 gap-4 text-gray-900">
+                            {services.map(({ category, items }) => (
+                              <div key={category}>
+                                <h2 className="text-xl font-bold mb-3 underline">{category}</h2>
+                                <ul>
+                                  {items.map(({ name, description, img }) => (
+                                    <li key={name} className="flex gap-2 hover:bg-gray-100 p-2 rounded-lg">
+                                      <div className="relative w-12 h-12 mt-1.5">
+                                        <Image
+                                          src={img}
+                                          alt="Each link Logo"
+                                          fill
+                                          className="object-contain"
+                                        />
+                                      </div>
+                                      <Link href="#" className="block">
+                                        <div className="font-semibold">{name}</div>
+                                        <span className="text-sm text-gray-500 dark:text-gray-400">
+                                          {description.slice(0, 50)}...
+                                        </span>
+                                      </Link>
+                                    </li>
+                                  ))}
+                                  <li className="font-medium hover:underline mt-2">All Services</li>
+                                </ul>
+                              </div>
+                            ))}
                           </div>
-                        ))}
-                      </div>
-                    </section>
+                        </div>
+                      </section>
+                    )}
                   </li>
+
                 ) : (
                   <li key={val.title}>
                     <Link
@@ -221,10 +225,10 @@ const Navbar = () => {
                 )
               ))}
             </ul>
+            <div onMouseEnter={() => setIsDropdownOpen(false)}>
 
-
-
-            <CustomButton>Book an appointment</CustomButton>
+            <CustomButton >Book an appointment</CustomButton>
+            </div>
           </div>
           {/* mobile Navigation Menu */}
           <div className="lg:hidden">
@@ -250,15 +254,21 @@ const Navbar = () => {
 
             {/* Sidebar */}
             <div
-              className={`fixed left-0 top-0 min-h-screen w-64 bg-white text-black transform ${toggle ? 'translate-x-0' : '-translate-x-full'
-                } transition-transform duration-300 z-50 shadow-lg`}
+              className={`fixed left-0 top-0 h-screen overflow-y-auto w-64 sm:w-6/12 bg-white block lg:hidden text-black transform ${toggle ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 z-50 shadow-lg`}
             >
-              <ul className=" text-black pl-5 pt-8 space-y-4">
+              <div className="relative w-40 h-10 mt-5 ml-3">
+                <Image
+                  src="https://i.postimg.cc/qgr6YXX6/Techno-Genix.webp"
+                  alt="Techno Genix Logo"
+                  fill  // এটি height ও width কে parent div থেকে নেয়
+                  className="object-contain"
+                />
+              </div>
+              <ul className=" text-black pl-5 pt-8 space-y-4 ">
                 {navLinks.map((val) => (
                   val.title === "Services" ? (
-                    <li key={val.title} className=" group cursor-pointer">
-                      <Link
-                        href={val.path}
+                    <li onClick={() => setIsDropdownOpen(!isDropdownOpen)} key={val.title} className="  cursor-pointer">
+                      <div
                         className={`inline-flex items-center gap-2  transition-all duration-300 ${pathname === val.path ? 'font-bold text-primary' : 'text-black'
                           }`}
                       >
@@ -277,52 +287,51 @@ const Navbar = () => {
                         >
                           <path d="m6 9 6 6 6-6"></path>
                         </svg>
-                      </Link>
+                      </div>
 
                       {/* Dropdown menu for Services */}
-                      <section
-                        className="absolute left-1/2 w-full top-full transform -translate-x-1/2 translate-y-10 
-  delay-100 rounded-lg max-w-screen-xl bg-white p-4 shadow-2xl shadow-black 
-  z-10 transition-all ease-in opacity-0 group-hover:translate-y-0 
-  group-hover:opacity-100 group-hover:block"
-                      >
-                        <div className="grid max-w-screen-xl px-4 py-4 mx-auto text-gray-900  grid-cols-4 md:px-6">
-                          {services.map(({ category, items }) => (
-                            <div key={category} className="">
-                              <h2 className="text-xl font-bold mb-3 underline">{category}</h2>
-                              <ul className="">
-                                {items.map(({ name, description, img }) => (
-                                  <div key={name} className="flex  hover:bg-gray-100 p-2 rounded-lg">
-                                    <div className="relative w-12 h-12 mt-1.5">
-                                      <Image
-                                        src={img}
-                                        alt="Each link Logo"
-                                        fill  // এটি height ও width কে parent div থেকে নেয়
-                                        className="object-contain"
-                                      />
+                      {
+                        isDropdownOpen && <section
+                          className=""
+                        >
+                          <div className="text-gray-900 ">
+                            {services.map(({ category, items }) => (
+                              <div key={category} className="">
+                                <h2 className="text-xl font-bold mb-3 underline">{category}</h2>
+                                <ul className="">
+                                  {items.map(({ name, description, img }) => (
+                                    <div key={name} className="flex  hover:bg-gray-100 p-2 rounded-lg">
+                                      <div className="relative w-12 h-12 mt-1.5">
+                                        <Image
+                                          src={img}
+                                          alt="Each link Logo"
+                                          fill  // এটি height ও width কে parent div থেকে নেয়
+                                          className="object-contain"
+                                        />
+                                      </div>
+                                      <li key={name}>
+                                        <a
+                                          href="#"
+                                          className="block p-3  "
+                                        >
+                                          <div className="font-semibold">{name}</div>
+                                          <span className="text-sm text-gray-500 dark:text-gray-400">
+                                            {description.slice(0, 50)}...
+                                          </span>
+                                        </a>
+                                      </li>
                                     </div>
-                                    <li key={name}>
-                                      <a
-                                        href="#"
-                                        className="block p-3  "
-                                      >
-                                        <div className="font-semibold">{name}</div>
-                                        <span className="text-sm text-gray-500 dark:text-gray-400">
-                                          {description.slice(0, 50)}...
-                                        </span>
-                                      </a>
-                                    </li>
-                                  </div>
-                                ))}
+                                  ))}
 
-                                <li className="font-medium hover:underline">All Services</li>
+                                  <li className="font-medium hover:underline">All Services</li>
 
-                              </ul>
+                                </ul>
 
-                            </div>
-                          ))}
-                        </div>
-                      </section>
+                              </div>
+                            ))}
+                          </div>
+                        </section>
+                      }
                     </li>
                   ) : (
                     <li key={val.title}>
@@ -335,7 +344,7 @@ const Navbar = () => {
                     </li>
                   )
                 ))}
-                <CustomButton>Book an appointment</CustomButton>
+                <CustomButton >Book an appointment</CustomButton>
 
               </ul>
             </div>

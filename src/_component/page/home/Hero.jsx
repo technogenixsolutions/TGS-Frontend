@@ -66,15 +66,15 @@ export default function Hero() {
                 fill
                 className="object-cover" // or "object-center", "object-contain" based on your need
               />
-              <div className="absolute  z-10 p-8 bg-black/70 w-full h-full">
-                <div className="flex flex-col justify-center space-y-2 h-full max-w-screen-2xl mx-auto px-16">
+              <div className="absolute  z-10 px-4 sm:p-8 bg-black/70 w-full h-full">
+                <div className="flex flex-col justify-center space-y-2 h-full max-w-screen-2xl mx-auto md:px-16">
                   <div>
-                    <span className="inline-block px-4 py-1 mb-4 text-sm font-medium text-white bg-white/10 backdrop-blur-sm rounded-full border border-white/20 opacity-100 transform-none">
+                    <span className="inline-block px-4 py-1 mb-4 text-[10px] sm:text-sm font-medium text-white bg-white/10 backdrop-blur-sm rounded-full border border-white/20 opacity-100 transform-none">
                       {val?.heading}
                     </span>
                   </div>
-                  <h1 className="text-white text-5xl w-[600px]  font-bold">{val?.title}</h1>
-                  <p className="text-gray-400 mt-2 w-96">{val?.description}</p>
+                  <h1 className="text-white text-4xl sm:text-5xl sm:w-[600px]  sm:font-bold">{val?.title}</h1>
+                  <p className="text-gray-400 mt-2 sm:w-96">{val?.description}</p>
                   <div>
                     <CustomButton children={val?.button}></CustomButton>
                   </div>

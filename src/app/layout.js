@@ -79,7 +79,7 @@ export default function RootLayout({ children }) {
         <PageContextProvider>
           <Header />
           <div className="min-h-[calc(100vh-550px)]">
-             {children}
+            {children}
           </div>
           <Footer />
         </PageContextProvider>
