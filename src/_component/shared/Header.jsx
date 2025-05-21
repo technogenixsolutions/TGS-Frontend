@@ -142,7 +142,7 @@ const Navbar = () => {
             />
           </div>
           {/* dekstop Navigation Menu */}
-          <div id="mega-menu-full" className=" items-center justify-between font-normal gap-x-6 w-full hidden lg:flex md:w-auto ">
+          <div id="mega-menu-full" className=" items-center justify-between font-normal gap-x-4 w-full hidden lg:flex md:w-auto ">
             <ul className="flex lg:gap-x-8 items-center " >
               {navLinks.map((val) => (
                 val.title === "Services" ? (
@@ -216,6 +216,7 @@ const Navbar = () => {
                 ) : (
                   <li key={val.title}>
                     <Link
+                     onMouseEnter={() => setIsDropdownOpen(false)}
                       href={val.path}
                       className={`${pathname === val.path ? 'text-primary font-bold' : 'text-black'} transition-all`}
                     >

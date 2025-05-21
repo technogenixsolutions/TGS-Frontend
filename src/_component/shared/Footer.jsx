@@ -5,8 +5,8 @@ export default function Footer() {
   return <footer className="bg-footer">
     <div className="max-w-screen-2xl mx-auto ">
       <div >
-        <div className=" py-11 w-full  px-4 md:px-3">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+        <div className="py-11 w-full  px-4 md:px-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 ">
 
             {/* Company Info */}
             <div className="">
@@ -29,7 +29,7 @@ export default function Footer() {
             </div>
 
             {/* Quick Links */}
-            <div>
+            <div className="">
               <div className="">
                 <h1 className="text-white text-2xl font-normal">Quick Links</h1>
               </div>
@@ -44,7 +44,7 @@ export default function Footer() {
             </div>
 
             {/* Resources */}
-            <div>
+            <div className="">
               <div className="">
                 <h1 className="text-white text-2xl font-normal">Resources</h1>
               </div>
