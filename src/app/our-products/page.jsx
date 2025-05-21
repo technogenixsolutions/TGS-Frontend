@@ -66,21 +66,29 @@ function page() {
         },
         {
             id: 8,
-            title: "Pricing Plans",
-            imageUrl: "https://i.postimg.cc/vTFHPGBv/Monthly-Vs-Yearly.webp",
+            title: "Business Automation",
+            imageUrl: "https://i.postimg.cc/gky9ThMZ/Business-Automation.png",
             link: "/our-products/product-8",
+            category: "POS",
+        },
+        {
+            id: 8,
+            title: "POS Software",
+            imageUrl: "https://i.postimg.cc/L8vcHpF4/POS-Software.jpg",
+            link: "/our-products/product-9",
             category: "POS",
         },
         {
             id: 9,
             title: "AI-Powered Customer Support Suite",
             imageUrl: "https://acotegroup.com/products/9/product-04.jpg",
-            link: "/our-products/product-9",
+            link: "/our-products/product-10",
             category: "AI/ML",
         },
     ];
     const [activeCategory, setActiveCategory] = useState("All");
-    const filteredProducts = activeCategory === "All" ? products : products?.filter(product => product?.category === activeCategory)
+    const filteredProducts = activeCategory === "All" ? products : products?.filter(product => product?.category === activeCategory);
+    
     return (
         <section className="max-w-screen-2xl mx-auto px-2 py-10">
             <div className="flex flex-col items-center justify-center w-full space-y-3 md:space-y-5">
@@ -103,8 +111,8 @@ function page() {
                         key={category.label}
                         onClick={() => setActiveCategory(category.label)}
                         className={`px-6 py-2 text-sm md:text-base font-medium rounded-full border transition-all ${activeCategory === category.label
-                                ? "bg-black text-white"
-                                : "bg-white text-black border-[#C4C4C4] hover:bg-gray-100"
+                            ? "bg-black text-white"
+                            : "bg-white text-black border-[#C4C4C4] hover:bg-gray-100"
                             }`}
                     >
                         {category.label}
@@ -113,9 +121,9 @@ function page() {
             </div>
 
             {/* product design */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 rounded-2xl overflow-hidden shadow-lg">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5 rounded-2xl overflow-hidden py-10 shadow-lg">
                 {filteredProducts?.map((val, index) => (
-                    <Link key={index} href={val?.link} className="p-2">
+                    <Link key={index} href={val?.link} className="p-2 border-gray-200">
                         <div className="relative w-full h-80 rounded-t-2xl">
                             <Image
                                 src={val?.imageUrl}
