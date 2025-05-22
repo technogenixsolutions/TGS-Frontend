@@ -121,7 +121,7 @@ function page() {
             </div>
 
             {/* product design */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5 rounded-2xl overflow-hidden py-10 shadow-lg">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5 rounded-2xl overflow-hidden py-10 ">
                 {filteredProducts?.map((val, index) => (
                     <Link key={index} href={val?.link} className="p-2 border-gray-200">
                         <div className="relative w-full h-80 rounded-t-2xl">
@@ -140,7 +140,7 @@ function page() {
             </div>
 
             {/* next/prev buttons */}
-            <div className="flex justify-center space-x-2.5 mt-10">
+            <div className="flex justify-center space-x-2.5 mt-8">
                 <button className="flex items-center py-2 px-3 rounded font-medium select-none border text-gray-900 bg-white transition-colors hover:border-blue-600 hover:bg-primary hover:text-white">
                     ⪻ Previous
                 </button>

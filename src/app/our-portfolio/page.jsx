@@ -108,7 +108,7 @@ function page() {
                 ))}
             </div>
             {/* product design */}
-            <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 rounded-2xl overflow-hidden shadow-lg">
+            <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 rounded-2xl overflow-hidden ">
                 {filteredProducts?.map((val, index) => (
                     <Link key={index} href={val?.path} className="p-2">
                         <div className="relative w-full h-80 rounded-t-2xl">
