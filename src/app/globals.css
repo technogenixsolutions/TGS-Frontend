@@ -14,7 +14,31 @@
   --color-accent: var(--color-accent);
 }
 
+
 /* বডির স্টাইল */
 body {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* scrool bar color change  */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #20b149;
+    border-radius: 30px;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  scrollbar-color: #20B149 #f0f0f0;
+  border-radius: 0;
+
 }

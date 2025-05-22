@@ -1,3 +1,4 @@
+import ProductPosCart from "@/_component/Proudct/ProductPosCart";
 import { CiShoppingCart } from "react-icons/ci";
 
 async function page({ params }) {
@@ -5,7 +6,7 @@ async function page({ params }) {
     console.log(slug)
 
     return (
-        <div>
+        <div className="container mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 p-6 bg-white">
                 {/* <!-- Image Section --> */}
                 <div class="space-y-6">
@@ -191,7 +192,8 @@ async function page({ params }) {
                     </div>
                 </div>
             </section>
-
+            {/* product cart  */}
+            <ProductPosCart></ProductPosCart>
 
         </div>
     );
