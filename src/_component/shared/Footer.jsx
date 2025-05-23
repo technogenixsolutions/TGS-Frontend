@@ -13,7 +13,7 @@ export default function Footer() {
               <div className="space-y-3">
                 <div className="relative w-40 h-10">
                   <Image
-                    src="https://i.postimg.cc/qgr6YXX6/Techno-Genix.webp"
+                    src="https://i.postimg.cc/g0Tkd54r/TECHNOGENIX-SOLUTIONS-logo.png"
                     alt="Techno Genix Logo"
                     fill  // এটি height ও width কে parent div থেকে নেয়
                     className="object-contain"

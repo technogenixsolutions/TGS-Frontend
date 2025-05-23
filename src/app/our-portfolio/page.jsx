@@ -19,7 +19,7 @@ const portfolioProjects = [
         title: "Empower your finance with alpine banking Dashboard Development",
         path: "/our-portfolio/project-1",
         imageUrl: "https://acotegroup.com/portfolio/acot-portfolio-1.png",
-        category: "Finance Dashboard"
+        category: "Graphics Design"
     },
     {
         title: "Heavenly Fashion Ecommerce Market place Web Developmentsite Development",
@@ -31,7 +31,7 @@ const portfolioProjects = [
         title: "Sugar CRM is a robust solution & Customer Journey CRM Dashboard Development",
         path: "/our-portfolio/project-3",
         imageUrl: "https://acotegroup.com/portfolio/acot-portfolio-3.png",
-        category: "CRM"
+        category: "AI/ML"
     },
     {
         title: "InsightHub - KPI & Project Management Dashboard Web Developmentsite Development",

@@ -132,15 +132,15 @@ const Navbar = () => {
       <Navbartop></Navbartop>
       <nav className="bg-white relative  ">
         <div onMouseLeave={() => setIsDropdownOpen(false)} className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
-          <div className="relative w-40 h-10">
+          <Link href="/" className="relative w-40 h-10">
             <Image
               onMouseEnter={() => setIsDropdownOpen(false)}
-              src="https://i.postimg.cc/qgr6YXX6/Techno-Genix.webp"
+              src="https://i.postimg.cc/g0Tkd54r/TECHNOGENIX-SOLUTIONS-logo.png"
               alt="Techno Genix Logo"
               fill  // এটি height ও width কে parent div থেকে নেয়
               className="object-contain"
             />
-          </div>
+          </Link>
           {/* dekstop Navigation Menu */}
           <div id="mega-menu-full" className=" items-center justify-between font-normal gap-x-4 w-full hidden lg:flex md:w-auto ">
             <ul className="flex lg:gap-x-8 items-center " >

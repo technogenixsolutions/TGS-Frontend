@@ -1,5 +1,4 @@
 import Link from "next/link";
-import MonthlyYearly from "./MonthlyYearly";
 
 function ProductPosCart() {
     return (
@@ -31,9 +30,9 @@ function ProductPosCart() {
                         </div>
                     </div>
 
-                    <button className=" font-semibold py-2.5 sm:py-2 rounded-lg transition-all duration-200 w-full bg-[#E1146E] text-white">
+                    <Link Link href="/packages"  className="font-semibold py-2.5 sm:py-2 rounded-lg transition-all duration-200 w-full text-center bg-[#E1146E] text-white">
                         Get Started Now
-                    </button>
+                    </Link>
                 </div>
                 <div className=" p-20 rounded-xl shadow-lg flex flex-col justify-between transition-all duration-300 hover:shadow-xl relative border-2 border-[rgb(74,226,19)] bg-[#ecfee9] text-white space-y-3 md:space-y-6">
                     <div className="text-black">
@@ -48,13 +47,11 @@ function ProductPosCart() {
                         </div>
                     </div>
 
-                    <Link href="/features" className=" font-semibold py-2.5 sm:py-2 rounded-lg transition-all duration-200 w-full text-center bg-[rgb(74,226,19)] text-white">
+                    <Link href="/packages" className=" font-semibold py-2.5 sm:py-2 rounded-lg transition-all duration-200 w-full text-center bg-[rgb(74,226,19)] text-white">
                         Get Started Now
                     </Link>
                 </div>
             </div>
-            {/* MonthlyYearly cart create  */}
-            {/* <MonthlyYearly></MonthlyYearly> */}
 
         </section>
     );
