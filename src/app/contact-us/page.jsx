@@ -25,9 +25,15 @@ const ex = [
         img: 'https://acotegroup.com/contact-us/professional-icon.png',
     },
 ]
+const info = [
+    "We will contact you within 24 hours",
+    "We will clarify your expectations, business objectives, and project requirements",
+    "We will develop and accept a proposal",
+    "Following that, our partnership can begin",
+]
 function page() {
     return (
-        <section className="mb-10">
+        <section className="">
             {/* hero  */}
             <div>
                 <div className="relative w-full h-[400px] md:h-[627px] bg-[#0a1929] text-white mb-10 md:mb-[183px]">
@@ -99,7 +105,7 @@ function page() {
                 </div>
             </div>
             {/* from  */}
-            <div className="container mx-auto flex flex-col-reverse md:flex-row gap-14 items-start my-10">
+            <div className="container mx-auto flex flex-col-reverse md:flex-row gap-14 items-start my-16">
                 {/* Contact Form */}
                 <div className="flex-1 w-full bg-[#F2F2F7] p-6 md:p-9 rounded-lg">
                     <h2 className="text-2xl font-semibold mb-3">How can we help you?</h2>
@@ -232,23 +238,19 @@ function page() {
                             What we'll do next?
                         </h2>
                         <div className="space-y-5">
-                            {[
-                                "We will contact you within 24 hours",
-                                "We will clarify your expectations, business objectives, and project requirements",
-                                "We will develop and accept a proposal",
-                                "Following that, our partnership can begin",
-                            ].map((text, index) => (
-                                <div class="flex items-start">
-                                    {/* <!-- Number circle --> */}
-                                    <div class="flex-shrink-0 w-6 h-6 rounded-full border border-[#21B24B] bg-green-100 text-green-500 flex items-center justify-center mr-4 text-sm font-semibold">
+                            {info?.map((text, index) => (
+                                <div key={index} className="flex items-start">
+                                    {/* Number circle */}
+                                    <div className="flex-shrink-0 w-6 h-6 rounded-full border border-[#21B24B] bg-green-100 text-green-500 flex items-center justify-center mr-4 text-sm font-semibold">
                                         {index + 1}
                                     </div>
 
-                                    {/* <!-- Description text --> */}
-                                    <p class="text-base text-gray-700 font-light leading-snug md:leading-[20.8px]">
+                                    {/* Description text */}
+                                    <p className="text-base text-gray-700 font-light leading-snug md:leading-[20.8px]">
                                         {text}
                                     </p>
                                 </div>
+
 
                             ))}
                         </div>
@@ -257,25 +259,25 @@ function page() {
                     <div className="space-y-4">
                         <div>
                             <h3 className="text-gray-600 text-lg">Drop us a line</h3>
-                            <p className="text-lg font-medium">sales@acotegroup.com</p>
+                            <p className="text-lg font-medium">technogenixsolutions@gmail.com</p>
                         </div>
                         <div>
                             <h3 className="text-gray-600 text-lg">Main Office</h3>
                             <p className="text-lg font-medium leading-snug">
-                                6th Floor, DTX Business Center,<br />
-                                Pragati Sarani Road, Dhaka 1229
+                                Sector #11, Road #9, House #15, Uttara-Dhaka
                             </p>
                         </div>
                         <div>
                             <h3 className="text-gray-600 text-lg">Contacts</h3>
-                            <p className="text-lg font-medium">+88 01758 388865</p>
+                            <p className="text-lg font-medium">+88 01739715893</p>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
+            {/* google map */}
+            <div className="overflow-hidden h-0 pb-[40%] relative">
+                <iframe className="border-0 h-full w-full left-0 top-0  absolute" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.3630653513956!2d90.38116467456504!3d23.876741078584427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c5883c25e191%3A0x885d9ba6474db563!2sAnis%20home%20%40%20uttara!5e0!3m2!1sen!2sbd!4v1748093933404!5m2!1sen!2sbd" width="600" height="450" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </section>
     );
 }

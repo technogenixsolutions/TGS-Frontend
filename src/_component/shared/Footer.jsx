@@ -72,8 +72,6 @@ export default function Footer() {
                     </svg>
                     <p>
                       Sector #11, Road #9, House #15, Uttara-Dhaka
-                      {/* Main HQ :<br />
-                      DTX Business Center, 6th Floor, Plot no .1176 &amp; 1543 Pragati Sarani Road, Kuril, Dhaka 1229 */}
                     </p>
                   </li>
 
