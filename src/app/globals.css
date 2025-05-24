@@ -34,9 +34,24 @@ body {
     border-radius: 30px;
 }
 
+
 /* Firefox */
 * {
   scrollbar-width: thin;
   scroll-behavior: smooth;
   scrollbar-color: #20B149 #f0f0f0;
+}
+
+
+/* global.css or in style jsx */
+@keyframes rotateInfinite {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.custom-spinner {
+  animation: rotateInfinite 3s linear infinite;
 }
